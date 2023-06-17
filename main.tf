@@ -1,4 +1,4 @@
 module "test" {
-  source = "https://github.com/Shravang007/roboshop-terraform.git"
+  source = "https://github.com/Shravang007/tf-module-app.git"
   env    =  var.env
 }
