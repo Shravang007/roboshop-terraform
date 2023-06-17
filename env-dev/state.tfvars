@@ -1,0 +1,7 @@
+terraform {
+  backend "s3" {
+    bukcet ="terraform-74"
+    key    = "dev/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
