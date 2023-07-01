@@ -16,4 +16,3 @@ module "vpc" {
 #  env       = var.env
 #  tags      = merge(each.value["tags"], var.tags)
 
-}
