@@ -20,6 +20,9 @@ module "vpc" {
   default_vpc_id = var.default_vpc_id
 }
 
+output "subnet_ids" {
+  value = module.vpc
+}
 
 #module "app_server" {
 #  source     = "git::https://github.com/Shravang007/tf-module-app.git"
