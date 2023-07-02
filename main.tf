@@ -19,3 +19,15 @@ module "vpc" {
   tags       = var.tags
   default_vpc_id = var.default_vpc_id
 }
+
+
+#module "app_server" {
+#  source     = "git::https://github.com/Shravang007/tf-module-app.git"
+#
+#  subnet_id = each.value["subnets"]
+#
+#  env        = var.env
+#  tags       = var.tags
+#  component  = "test"
+#
+#}
