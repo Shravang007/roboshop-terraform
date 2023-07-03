@@ -56,3 +56,5 @@ components = {
  }
 
 default_vpc_id = "vpc-0f2281b96b66a8907"
+default_vpc_rt = "rtb-0eba10399021f8ac0"
+
