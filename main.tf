@@ -50,3 +50,5 @@ module "rabbitmq" {
   env  = var.env
   tags = var.tags
 }
+
+
