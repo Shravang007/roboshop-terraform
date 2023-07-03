@@ -39,17 +39,18 @@ module "app_server" {
 }
 
 module "rabbitmq" {
-  source = "git::https://github.com/Shravang007/tf-module-rabbitmq.git"
+  source          = "git::https://github.com/Shravang007/tf-module-rabbitmq.git"
 
   for_each        = var.rabbitmq
-  component      = each.value["component"]
-  instance_type  = each.value["instance_type"]
-  sg_subnet_cidr = lookup(lookup(lookup(lookup(var.vpc, "main", null), "subnets", null), "app", null), "cidr_block", null)
-  vpc_id         = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
-  subnet_id  = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnet_ids", null), "db", null), "subnet_ids", null) [0]
+  component       = each.value["component"]
+  instance_type   = each.value["instance_type"]
+  sg_subnet_cidr  = lookup(lookup(lookup(lookup(var.vpc, "main", null), "subnets", null), "app", null), "cidr_block", null)
+  vpc_id          = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
+  subnet_id       = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnet_ids", null), "db", null), "subnet_ids", null) [0]
 
-  env  = var.env
-  tags = var.tags
+  env            = var.env
+  tags           = var.tags
+  allow_ssh_cidr = var.allow_ssh_cidr
 }
 
 
