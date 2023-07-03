@@ -59,7 +59,7 @@ module "rds" {
 
 
        for_each  = var.rds
-  component      = each.value[component]
+  component      = each.value["component"]
    engine        = each.value["engine"]
   engine_version = each.value["engine_version"]
   database_name  = each.value["database_name"]
