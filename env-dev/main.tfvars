@@ -58,8 +58,9 @@ components = {
   default_vpc_id = "vpc-0f2281b96b66a8907"
   default_vpc_rt = "rtb-0eba10399021f8ac0"
   allow_ssh_cidr = [ "172.31.4.166/32" ]
+  zone_id       = "Z08411971YPWLUUTH65Y1"
 
-  rabbitmq     = {
+rabbitmq     = {
   main       = {
     instance_type = "t3.small"
     component     = "rabbitmq"
