@@ -82,7 +82,7 @@ rds = {
 }
 
 documentdb = {
-    main     =
-    component       = "docdb"
-
+    main      = {
+      component = "docdb"
+    }
 }
