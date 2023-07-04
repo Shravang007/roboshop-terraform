@@ -69,6 +69,7 @@ module "rds" {
    env           = var.env
    tags          = var.tags
    kms_key_arn   = var.kms_key_arn
+  instance_class = var.instance_class
 
 }
 
