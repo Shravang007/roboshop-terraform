@@ -60,6 +60,7 @@ env = "dev"
   allow_ssh_cidr = [ "172.31.4.166/32" ]
   zone_id        = "Z08411971YPWLUUTH65Y1"
   kms_key_id     = "65440a1c-b9ad-4ac4-9614-e06631037055"
+  kms_key_arn    = "arn:aws:kms:us-east-1:752442278108:key/65440a1c-b9ad-4ac4-9614-e06631037055"
 
 
 rabbitmq     = {
