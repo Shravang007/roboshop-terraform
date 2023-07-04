@@ -1,39 +1,39 @@
 env = "dev"
 
 
-components = {
-
-  frontend = {
-    tags = { Monitor = "true", env = "dev" }
-  }
-  mongodb = {
-    tags = { env = "dev" }
-  }
-  catalogue = {
-    tags = { Monitor = "true", env = "dev" }
-  }
-  redis = {
-    tags = { env = "dev" }
-  }
-  user = {
-    tags = { Monitor = "true", env = "dev" }
-  }
-  cart = {
-    tags = { Monitor = "true", env = "dev" }
-  }
-  mysql = {
-    tags = { env = "dev" }
-  }
-  shipping = {
-    tags = { Monitor = "true", env = "dev" }
-  }
-  rabbitmq = {
-    tags = { env = "dev" }
-  }
-  payment = {
-    tags = { Monitor = "true", env = "dev" }
-  }
-}
+#components = {
+#
+#  frontend = {
+#    tags = { Monitor = "true", env = "dev" }
+#  }
+#  mongodb = {
+#    tags = { env = "dev" }
+#  }
+#  catalogue = {
+#    tags = { Monitor = "true", env = "dev" }
+#  }
+#  redis = {
+#    tags = { env = "dev" }
+#  }
+#  user = {
+#    tags = { Monitor = "true", env = "dev" }
+#  }
+#  cart = {
+#    tags = { Monitor = "true", env = "dev" }
+#  }
+#  mysql = {
+#    tags = { env = "dev" }
+#  }
+#  shipping = {
+#    tags = { Monitor = "true", env = "dev" }
+#  }
+#  rabbitmq = {
+#    tags = { env = "dev" }
+#  }
+#  payment = {
+#    tags = { Monitor = "true", env = "dev" }
+#  }
+#}
 
   tags = {
     company_name  = "XYZ Tech"
@@ -58,7 +58,8 @@ components = {
   default_vpc_id = "vpc-0f2281b96b66a8907"
   default_vpc_rt = "rtb-0eba10399021f8ac0"
   allow_ssh_cidr = [ "172.31.4.166/32" ]
-  zone_id       = "Z08411971YPWLUUTH65Y1"
+  zone_id        = "Z08411971YPWLUUTH65Y1"
+  kms_key_id     = "65440a1c-b9ad-4ac4-9614-e06631037055"
 
 rabbitmq     = {
   main       = {
