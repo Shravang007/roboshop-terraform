@@ -61,6 +61,7 @@ env = "dev"
   zone_id        = "Z08411971YPWLUUTH65Y1"
   kms_key_id     = "65440a1c-b9ad-4ac4-9614-e06631037055"
 
+
 rabbitmq     = {
   main       = {
     instance_type = "t3.small"
