@@ -111,7 +111,7 @@ module "elasticache" {
   num_node_groups         = each.value["num_node_groups"]
   node_type               = each.value["node_type"]
   vpc_id                  = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
-
+  parameter_group_name    = "default.redis6.x.cluster.on"
 
     env                   = var.env
     tags                  = var.tags
