@@ -102,3 +102,18 @@ elasticache = {
     parameter_group_name    = "default.redis7"
   }
 }
+
+alb = {
+  public = {
+    name               = "public"
+    internal           = false
+    load_balancer_type = "application"
+    subnet_ref         = "public"
+  }
+  private = {
+    name               = "private"
+    internal           = true
+    load_balancer_type = "application"
+    subnet_ref         = "app"
+  }
+}
