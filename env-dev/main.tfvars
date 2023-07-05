@@ -89,6 +89,10 @@ documentdb = {
 
 elasticache = {
   main = {
-    component = "elasticache"
+    component               = "elasticache"
+    engine                  = "redis"
+    engine_version          = "6.2"
+    replicas_per_node_group = 1
+    num_node_groups         = 1
   }
 }
