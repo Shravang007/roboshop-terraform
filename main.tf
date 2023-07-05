@@ -86,7 +86,10 @@ module "documentdb" {
   subnet_ids     = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnet_ids", null), "db", null), "subnet_ids", null)
   sg_subnet_cidr = lookup(lookup(lookup(lookup(var.vpc, "main", null), "subnets", null), "app", null), "cidr_block", null)
   vpc_id         = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
-
+  engine            = each.value["engine"]
+  engine_version    = each.value["engine_version"]
+  instance_class    = each.value["instance_class"]
+  db_instance_count = 1
   env           = var.env
   tags          = var.tags
   kms_key_arn   = var.kms_key_arn
