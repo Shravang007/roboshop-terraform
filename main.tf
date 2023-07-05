@@ -105,7 +105,9 @@ module "elasticache" {
   engine_version          = each.value["engine_version"]
   replicas_per_node_group = each.value["replicas_per_node_group"]
   num_node_groups         = each.value["num_node_groups"]
+  node_type               = each.value["node_type"]
   vpc_id                  = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
+
 
     env                   = var.env
     tags                  = var.tags
