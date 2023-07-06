@@ -115,6 +115,8 @@ alb = {
     internal           = true
     load_balancer_type = "application"
     subnet_ref         = "app"
+    lb_dns_name        = internal-private-dev-lb-1583037584
+
   }
 }
 
