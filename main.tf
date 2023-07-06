@@ -129,7 +129,7 @@ module "vpc" {
 #}
 
 module "alb" {
-  source = "git::https://github.com/Shravang007/tf-module-module-alb.git"
+  source = "git::https://github.com/Shravang007/tf-module-alb.git"
 
   for_each           = var.alb
   name               = each.value["name"]
