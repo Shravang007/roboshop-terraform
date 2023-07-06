@@ -11,12 +11,12 @@
 module "vpc" {
   source     = "git::https://github.com/Shravang007/tf-module-vpc.git"
 
-  for_each   = var.vpc
-  cidr_block = each.value["cidr_block"]
-  subnets = each.value["subnets"]
+  for_each       = var.vpc
+  cidr_block     = each.value["cidr_block"]
+  subnets        = each.value["subnets"]
 
-  env        = var.env
-  tags       = var.tags
+  env            = var.env
+  tags           = var.tags
   default_vpc_id = var.default_vpc_id
   default_vpc_rt = var.default_vpc_rt
 
@@ -129,7 +129,7 @@ module "vpc" {
 #}
 
 module "alb" {
-  source = "git::https://github.com/raghudevopsb73/tf-module-alb.git"
+  source = "git::https://github.com/Shravang007/tf-module-module-alb.git"
 
   for_each           = var.alb
   name               = each.value["name"]
