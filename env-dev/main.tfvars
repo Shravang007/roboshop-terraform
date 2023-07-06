@@ -130,3 +130,4 @@ apps = {
     lb_ref           = "private"
     lb_rule_priority = 100
   }
+}
