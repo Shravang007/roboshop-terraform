@@ -38,7 +38,7 @@ module "apps" {
 
   subnets            = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnet_ids", null), each.value["subnet_ref"], null), "subnet_ids", null)
   vpc_id             = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
-  lb_dns_name        = lookup(lookup(module.alb, each.value["lb_ref"], null), "dns_name", null)
+  lb_dns_name        = lookup(lookup(module.alb, each.value["lb_ref"], null), "dns_name", null) [0]
 
 
   #  module.vpc ["main"] ["subnet_ids"] ["app"] ["subnet_ids"] [0]
