@@ -121,15 +121,16 @@ alb = {
 
 apps = {
   cart = {
-    component        = "cart"
-    app_port         = 8080
-    instance_type    = "t3.micro"
-    desired_capacity = 1
-    max_size         = 1
-    min_size         = 1
-    subnet_ref       = "app"
-    lb_ref           = "private"
-    lb_rule_priority = 100
+    component          = "cart"
+    app_port           = 8080
+    instance_type      = "t3.micro"
+    desired_capacity   = 1
+    max_size           = 1
+    min_size           = 1
+    subnet_ref         = "app"
+    lb_ref             = "private"
+    lb_rule_priority   = 100
+    extra_param_access = []
   }
   catalogue = {
     component          = "catalogue"
@@ -141,6 +142,7 @@ apps = {
     subnet_ref         = "app"
     lb_ref             = "private"
     lb_rule_priority   = 101
+    extra_param_access = ["arn:aws:ssm:us-east-1:752442278108:parameter/roboshop.dev.docdb*"]
   }
   user = {
     component          = "user"
