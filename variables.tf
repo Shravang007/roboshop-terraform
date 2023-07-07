@@ -13,4 +13,3 @@ variable "documentdb" {}
 variable "elasticache" {}
 variable "alb" {}
 variable "apps" {}
-variable "kms_arn" {}
