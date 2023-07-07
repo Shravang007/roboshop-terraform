@@ -42,7 +42,7 @@ module "apps" {
   listener_arn       = lookup(lookup(module.alb, each.value["lb_ref"], null), "listener_arn", null)
   lb_rule_priority   = each.value["lb_rule_priority"]
   kms_key_id         = var.kms_key_arn
-  extra_param_access =
+  extra_param_access = each.value["extra_param_access"]
 
   env                   = var.env
   tags                  = var.tags
