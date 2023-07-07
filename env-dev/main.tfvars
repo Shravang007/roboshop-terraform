@@ -130,7 +130,6 @@ apps = {
     subnet_ref         = "app"
     lb_ref             = "private"
     lb_rule_priority   = 100
-    extra_param_access = []
   }
   catalogue = {
     component          = "catalogue"
@@ -154,6 +153,7 @@ apps = {
     subnet_ref         = "app"
     lb_ref             = "private"
     lb_rule_priority   = 102
+    extra_param_access = ["arn:aws:ssm:us-east-1:752442278108:parameter/roboshop.dev.docdb*"]
   }
   shipping = {
     component          = "shipping"
