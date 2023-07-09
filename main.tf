@@ -20,6 +20,7 @@ module "vpc" {
   default_vpc_id = var.default_vpc_id
   default_vpc_rt = var.default_vpc_rt
 
+
 }
 
 
