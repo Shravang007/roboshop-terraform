@@ -61,11 +61,11 @@ kms_key_arn    = "arn:aws:kms:us-east-1:752442278108:key/65440a1c-b9ad-4ac4-9614
   main = {
     component               = "elasticache"
     engine                  = "redis"
-    engine_version          = "6.x"
+    engine_version          = "6.2"
     replicas_per_node_group = 1
     num_node_groups         = 1
     node_type               = "cache.t3.medium"
-    parameter_group_name    = "default.redis6.x.cluster.on"
+    parameter_group_name    = "default.redis7"
   }
 }
 
