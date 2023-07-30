@@ -8,7 +8,7 @@ tags = {
   project_name  = "roboshop"
 }
 
-vpc = {
+ vpc = {
   main = {
     cidr_block = "10.10.0.0/16"
     subnets  = {
@@ -29,14 +29,14 @@ kms_key_id     = "65440a1c-b9ad-4ac4-9614-e06631037055"
 kms_key_arn    = "arn:aws:kms:us-east-1:752442278108:key/65440a1c-b9ad-4ac4-9614-e06631037055"
 
 
-rabbitmq     = {
+ rabbitmq     = {
   main       = {
     instance_type = "t3.small"
     component     = "rabbitmq"
   }
 }
 
-rds = {
+ rds = {
   main = {
     component               = "rds"
     engine                  = "aurora-mysql"
@@ -47,7 +47,7 @@ rds = {
   }
 }
 
-documentdb = {
+ documentdb = {
   main      = {
     component         = "docdb"
     engine            = "docdb"
@@ -57,7 +57,7 @@ documentdb = {
   }
 }
 
-elasticache = {
+ elasticache = {
   main = {
     component               = "elasticache"
     engine                  = "redis"
@@ -69,7 +69,7 @@ elasticache = {
   }
 }
 
-alb = {
+ alb = {
   public = {
     name               = "public"
     internal           = false
@@ -85,7 +85,7 @@ alb = {
   }
 }
 
-apps = {
+ apps = {
   cart = {
     component          = "cart"
     app_port           = 8080
