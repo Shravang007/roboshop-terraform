@@ -152,3 +152,16 @@ module "vpc" {
 #}
 #
 #
+
+ module "alb" {
+   source = "git::https://github.com/Shravang007/tf-module-eks.git"
+
+   for_each       = var.eks
+   subnets_ids    = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnet_ids", null), each.value["subnet_ref"], null), "subnet_ids", null)
+   min_size       = each.value["min_size"]
+   max_size       = each.value["max_size"]
+   env            = var.env
+   capacity_types = each.value["capacity_types"]
+   instance_types = each.value["instance_types"]
+ }
+
