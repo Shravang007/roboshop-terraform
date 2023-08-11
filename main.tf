@@ -161,7 +161,7 @@ module "vpc" {
    min_size       = each.value["min_size"]
    max_size       = each.value["max_size"]
    env            = var.env
-   capacity_types = each.value["capacity_types"]
+   capacity_type  = each.value["capacity_type"]
    instance_types = each.value["instance_types"]
  }
 
