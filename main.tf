@@ -163,5 +163,7 @@ module "vpc" {
    env            = var.env
    capacity_type  = each.value["capacity_type"]
    instance_types = each.value["instance_types"]
+
+
  }
 
