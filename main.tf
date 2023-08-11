@@ -153,7 +153,7 @@ module "vpc" {
 #
 #
 
- module "alb" {
+ module "eks" {
    source = "git::https://github.com/Shravang007/tf-module-eks.git"
 
    for_each       = var.eks
