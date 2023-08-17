@@ -163,6 +163,7 @@ module "elasticache" {
    env            = var.env
    capacity_type  = each.value["capacity_type"]
    instance_types = each.value["instance_types"]
+   kms_arn        = var.kms_key_arn
 
 
  }
