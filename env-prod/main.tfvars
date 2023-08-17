@@ -161,10 +161,10 @@ kms_key_arn    = "arn:aws:kms:us-east-1:752442278108:key/65440a1c-b9ad-4ac4-9614
   eks = {
     main = {
     subnet_ref     = "app"
-    min_size       = 2
-    max_size       = 2
+    min_size       = 3
+    max_size       = 3
     capacity_type  = "SPOT"
-    instance_types = ["t3.xlarge", "t3.large", "t3.medium"]
+    instance_types = ["t3.2xlarge"]
   }
 }
 
